@@ -2,139 +2,182 @@
 interface Skill {
     name: string;
     percentage: number;
+    category?: string;
 }
 
 var skills: Skill[] = [
     {
         name: ".NetCore",
-        percentage: 65
+        percentage: 65,
+        category: "Backend"
     },
     {
         name: "Angular",
         percentage: 60,
+        category: "Frontend"
     },
     {
         name: "HTML",
         percentage: 60,
+        category: "Frontend"
     },
     {
         name: "CSS",
         percentage: 50,
+        category: "Frontend"
     },
     {
         name: "JavaScript",
         percentage: 60,
+        category: "Frontend"
     },
     {
         name: "React",
         percentage: 30,
+        category: "Frontend"
     },
     {
         name: "Node.js",
         percentage: 50,
+        category: "Backend"
     },
     {
         name: "MongoDB",
         percentage: 40,
+        category: "Database"
     },
     {
         name: "Python",
         percentage: 30,
+        category: "Backend"
     },
     {
         name: "SQL",
         percentage: 40,
+        category: "Database"
     },
     {
         name: "Flutter",
         percentage: 15,
+        category: "Mobile"
     },
     {
         name: ".NetMAUI",
-        percentage: 45
+        percentage: 45,
+        category: "Mobile"
     },
     {
         name: "Xamarin",
-        percentage: 40
+        percentage: 40,
+        category: "Mobile"
     },
     {
         name: "Docker",
-        percentage: 30
+        percentage: 30,
+        category: "DevOps"
     },
     {
         name: "Kubernetes",
-        percentage: 20
+        percentage: 20,
+        category: "DevOps"
     },
     {
         name: "Azure DevOps",
-        percentage: 30
+        percentage: 30,
+        category: "DevOps"
     },
-
     {
         name: "Git",
-        percentage: 80
+        percentage: 80,
+        category: "Version Control"
     },
     {
         name: "SonarQube",
-        percentage: 80
+        percentage: 80,
+        category: "Quality Assurance"
     },
     {
         name: "Scrum",
-        percentage: 40
+        percentage: 40,
+        category: "Project Management"
     },
     {
         name: "TDD",
-        percentage: 60
+        percentage: 60,
+        category: "Quality Assurance"
     },
     {
         name: "CI/CD",
-        percentage: 40
+        percentage: 40,
+        category: "DevOps"
     },
     {
         name: "Microservices",
-        percentage: 50
+        percentage: 50,
+        category: "Architecture"
     },
     {
         name: "API Gateway",
-        percentage: 80
+        percentage: 80,
+        category: "Architecture"
     },
     {
         name: "RESTful APIs",
-        percentage: 70
+        percentage: 70,
+        category: "Backend"
     },
     {
         name: "GraphQL",
-        percentage: 70
+        percentage: 70,
+        category: "Backend"
     },
     {
         name: "PWA's",
-        percentage: 40
+        percentage: 40,
+        category: "Frontend"
     },
     {
         name: "Clean Code",
-        percentage: 70
+        percentage: 70,
+        category: "Best Practices"
     },
     {
         name: "Code Reviews",
-        percentage: 70
+        percentage: 70,
+        category: "Best Practices"
+    },
+    {
+        name: "MySQL",
+        percentage: 60,
+        category: "Database"
+    },
+    {
+        name: "Redis",
+        percentage: 70,
+        category: "Database"
     }
 ]
 ---
 <div class="container mx-auto p-6">
     <h1 class="text-3xl font-bold mb-2 border-b-2 pb-1 texto-primario">Habilidades</h1>
-    <p class="text-2xl texto-terciario">
+    <p class="text-2xl texto-terciario pb-3">
         A continuación, se muestran algunas de las habilidades que he adquirido a lo largo de mi carrera profesional.
     </p>
 
-    <section class="mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 skills-section">
-        {skills.map(skill => (
-            <a href={`#${skill.name.toLowerCase()}`} class="text-2xl text-white skill-card p-4 rounded-lg text-start block hover:text-fuchsia-500">
-                <h3 class="text-xl font-semibold">{skill.name}</h3>
-                <div class="progress-bar bg-gray-400 h-2 rounded-lg mt-2">
-                    <div class="progress bg-fuchsia-400 h-2 rounded-lg" style={{ width: `${skill.percentage}%` }}></div>
-                </div>
-            </a>
-        ))}
-    </section>
+    {Array.from(new Set(skills.map(skill => skill.category))).map(category => (
+        <section class="category-section mb-6">
+            <h2 class="text-2xl font-bold mb-4 text-white">{category}</h2>
+            <div class="mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 skills-section">
+                {skills.filter(skill => skill.category === category).map(skill => (
+                    <a href={`#${skill.name.toLowerCase()}`} class="text-2xl text-white skill-card p-4 rounded-lg text-start block hover:text-fuchsia-500">
+                        <h3 class="text-xl font-semibold">{skill.name}</h3>
+                        <div class="progress-bar bg-gray-400 h-2 rounded-lg mt-2">
+                            <div class="progress bg-fuchsia-400 h-2 rounded-lg" style={{ width: `${skill.percentage}%` }}></div>
+                        </div>
+                    </a>
+                ))}
+            </div>
+        </section>
+    ))}
 </div>
 
