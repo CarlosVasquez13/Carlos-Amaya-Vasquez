@@ -19,3 +19,7 @@
     color: var(--color-terciario);
     font-weight: 500;
 }
+
+.bg-card-primario {
+    background-color: oklch(0.72 0.16 287.9 / 0.1);
+}

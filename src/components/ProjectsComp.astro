@@ -75,8 +75,7 @@ const proyects: Proyect[] = [
     <p class="text-lg texto-terciario pb-4">A lo largo de me experiencia he estado involucrado en diferentes proyectos de desarrollo</p>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         {proyects.map((proyect) => (
-            <div class=" shadow-md rounded-lg p-4 flex items-center">
-                {/* <img src={proyect.icon} alt="icon" class="w-12 h-12 mr-4" /> */}
+            <div class="shadow-md rounded-lg p-4 flex items-center bg-card-primario">
                 <div>
                     <h2 class="font-bold text-4xl texto-secundario">{proyect.title}</h2>
                     <p class="text-white font-semibold text-justify">{proyect.description}</p>
@@ -85,3 +84,4 @@ const proyects: Proyect[] = [
         ))}
     </div>
 </section></section>
+
