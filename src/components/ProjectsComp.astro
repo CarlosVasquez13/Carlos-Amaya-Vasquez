@@ -1,0 +1,80 @@
+---
+
+
+var proyects = [
+  {
+    title: "ERP Web",
+    description: "Desarrollo y mantenimiento de un sistema ERP utilizando Angular en el frontend y microservicios Web API con .NET Core en el backend. Me encargué de la optimización de consultas, diseño de arquitectura basada en microservicios y mejora del rendimiento general del sistema",
+    image: "/images/proyect1.jpg",
+    url: "https://www.google.com",
+    icon: ""
+  },
+    {
+        title: "ERP Legacy",
+        description: "Mantenimiento y desarrollo de nuevos módulos para un sistema ERP basado en Visual Basic y WinForms. Trabajé en la refactorización de código, integración con nuevos servicios y modernización de procesos sin afectar la estabilidad del sistema.",
+        image: "/images/proyect2.jpg",
+        url: "https://www.google.com",
+        icon: ""
+    },
+    {
+        title: "E-commerce Web",
+        description: "Creación y mantenimiento de plataformas de comercio electrónico, implementando soluciones escalables y seguras para la gestión de productos, pagos y envíos. He trabajado en la optimización de rendimiento y experiencia de usuario para mejorar la conversión de clientes.",
+        image: "/images/proyect3.jpg",
+        url: "https://www.google.com",
+        icon: ""
+    },
+    {
+        title: "Web API's con .Netcore",
+        description: "Desarrollo de APIs RESTful utilizando .NET Core para el backend. Implementé estrategias de autenticación, control de acceso y optimización de endpoints para mejorar la velocidad y eficiencia en el consumo de datos.",
+        image: "/images/proyect5.jpg",
+        url: "https://www.google.com",
+        icon: ""
+    },
+    {
+        title: "Microservicios distribuidos",
+        description: "Diseño e implementación de arquitecturas basadas en microservicios, utilizando API Gateway para la comunicación entre servicios y asegurando escalabilidad, resiliencia y seguridad en la integración de múltiples componentes del sistema.",
+        image: "/images/proyect6.jpg",
+        url: "https://www.google.com",
+        icon: ""
+    },
+    {
+        title: "Sistemas monolíticos",
+        description: "Mantenimiento y migración de sistemas monolíticos hacia nuevas tecnologías, optimizando el código y mejorando su arquitectura. Participé en la migración de aplicaciones desde .NET Framework a .NET Core, mejorando el rendimiento y reduciendo la deuda técnica.",
+        image: "/images/proyect7.jpg",
+        url: "https://www.google.com",
+        icon: ""
+    },
+    {
+        title: "Aplicaciones móviles",
+        description: "Desarrollo y mantenimiento de aplicaciones móviles con Xamarin, .NET MAUI y Flutter, enfocadas en ofrecer experiencias fluidas y nativas en dispositivos iOS y Android. Participé en la integración con APIs, almacenamiento en la nube y optimización de rendimiento.",
+        image: "/images/proyect7.jpg",
+        url: "https://www.google.com",
+        icon: ""
+    },
+    {
+        title: "Aplicaciones Web Progresivas (PWA's)",
+        description: "Creación de aplicaciones web progresivas (PWAs) con implementación de notificaciones push, optimización de carga y experiencia offline, proporcionando soluciones modernas para la web con alto rendimiento y accesibilidad.",
+        image: "/images/proyect7.jpg",
+        url: "https://www.google.com",
+        icon: ""
+    }
+ 
+]
+---
+
+
+<section class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-2 border-b-2 pb-1 texto-primario">Proyectos</h1>
+    <p class="text-lg texto-terciario pb-4">A lo largo de me experiencia he estado involucrado en diferentes proyectos de desarrollo</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {proyects.map((proyect) => (
+            <div class=" shadow-md rounded-lg p-4 flex items-center">
+                {/* <img src={proyect.icon} alt="icon" class="w-12 h-12 mr-4" /> */}
+                <div>
+                    <h2 class="font-bold text-4xl texto-secundario">{proyect.title}</h2>
+                    <p class="text-white font-semibold text-justify">{proyect.description}</p>
+                </div>
+            </div>
+        ))}
+    </div>
+</section></section>

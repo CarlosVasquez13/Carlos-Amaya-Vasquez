@@ -1,0 +1,139 @@
+---
+var skills = [
+    {
+        name: ".NetCore",
+        percentage: 65
+    },
+    {
+        name: "Angular",
+        percentage: 60,
+    },
+    {
+        name: "HTML",
+        percentage: 60,
+    },
+    {
+        name: "CSS",
+        percentage: 50,
+    },
+    {
+        name: "JavaScript",
+        percentage: 60,
+    },
+    {
+        name: "React",
+        percentage: 30,
+    },
+    {
+        name: "Node.js",
+        percentage: 50,
+    },
+    {
+        name: "MongoDB",
+        percentage: 40,
+    },
+    {
+        name: "Python",
+        percentage: 30,
+    },
+    {
+        name: "SQL",
+        percentage: 40,
+    },
+    {
+        name: "Flutter",
+        percentage: 15,
+    },
+    {
+        name: ".NetMAUI",
+        percentage: 45
+    },
+    {
+        name: "Xamarin",
+        percentage: 40
+    },
+    {
+        name: "Docker",
+        percentage: 30
+    },
+    {
+        name: "Kubernetes",
+        percentage: 20
+    },
+    {
+        name: "Azure DevOps",
+        percentage: 30
+    },
+
+    {
+        name: "Git",
+        percentage: 80
+    },
+    {
+        name: "SonarQube",
+        percentage: 80
+    },
+    {
+        name: "Jira",
+        percentage: 40
+    },
+    {
+        name: "Scrum",
+        percentage: 70
+    },
+    {
+        name: "TDD",
+        percentage: 70
+    },
+    {
+        name: "CI/CD",
+        percentage: 40
+    },
+    {
+        name: "Microservices",
+        percentage: 50
+    },
+    {
+        name: "API Gateway",
+        percentage: 80
+    },
+    {
+        name: "RESTful APIs",
+        percentage: 70
+    },
+    {
+        name: "GraphQL",
+        percentage: 70
+    },
+    {
+        name: "PWA's",
+        percentage: 40
+    },
+    {
+        name: "Clean Code",
+        percentage: 70
+    },
+    {
+        name: "Code Reviews",
+        percentage: 70
+    }
+]
+---
+<div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-2 border-b-2 pb-1 texto-primario">Habilidades</h1>
+    <p class="text-lg texto-terciario">
+        A continuación, se muestran las habilidades que he adquirido a lo largo de mi carrera profesional.
+    </p>
+
+    <section class="mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 skills-section">
+        {skills.map(skill => (
+            <a href={`#${skill.name.toLowerCase()}`} class=" text-white skill-card p-4 rounded-lg text-start block hover:text-fuchsia-500">
+                <h3 class="text-lg font-semibold ">{skill.name}</h3>
+                <div class="progress-bar bg-gray-400 h-2 rounded-lg mt-2">
+                    <div class="progress bg-fuchsia-400 h-2 rounded-lg" style={{ width: `${skill.percentage}%` }}></div>
+                </div>
+            </a>
+        ))}
+    </section>
+</div>
+

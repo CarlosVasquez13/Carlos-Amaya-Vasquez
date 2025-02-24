@@ -1,0 +1,22 @@
+---
+
+var aboutMe = {
+    title: "Sobre Mí",
+    description: [
+        "Soy programador fullstack con cuatro años de experiencia. Me apasiona la programación y disfruto especialmente el desarrollo backend, donde me enfoco en construir soluciones robustas y eficientes. Siempre estoy buscando aprender y mejorar mis habilidades, explorando nuevas tecnologías y mejores prácticas.",
+        "Más allá del código, disfruto del anime, viajar en motocicleta y pasar tiempo con mi familia. Para mí, la programación no es solo un trabajo, sino una forma de crear, innovar y resolver problemas de manera efectiva."
+    ]
+}
+---
+<div class="container mx-auto p-6" id="about">
+    <h1 class="text-3xl font-bold mb-2 border-b-2 texto-primario">Sobre Mí</h1>
+    {
+        aboutMe.description.map((paragraph) => (
+        <p class="text-lg texto-terciario">
+        {paragraph}
+        </p>
+        <span class="px-3"></span>
+        ))
+    }
+    
+</div>

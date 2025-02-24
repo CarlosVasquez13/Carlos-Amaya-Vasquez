@@ -1,0 +1,44 @@
+---
+
+var contacts = [
+    {
+        type: 'phone',
+        value: 'https://wa.me/87343881',
+        icon: '/public/icons/whatsapp.png'
+    },
+    {
+        type: 'email',
+        value: 'carlos1305vasquez@gmail.com',
+        icon: '/public/icons/gmail.png'
+    },
+    {
+        type: 'website',
+        value: '@john_doe',
+        icon: '/public/icons/instagram.png'
+    },
+    {
+        type: 'website',
+        value: '@john_doe',
+        icon: '/public/icons/x.png'
+    },
+    {
+        type: 'website',
+        value: 'www.linkedin.com/in/carlos-vasquez-812b91240',
+        icon: '/public/icons/linkedin.png'
+    }
+]
+---
+
+<div class="container mx-auto p-6" id="contact">
+    <h1 class="text-3xl font-bold mb-2  pb-3 texto-primario">Contacto</h1>
+
+    <div style="display: flex; justify-content: baseline; gap: 3rem;">
+        {contacts.map(contact => (
+            <a href={contact.value} target="_blank" style="text-decoration: none; color: inherit; text-align: center;">
+                <div>
+                    <img src={contact.icon} alt={contact.type} style="" class="w-auto h-12"  />
+                </div>
+            </a>
+        ))}
+    </div>
+</div>

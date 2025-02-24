@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+
+:root {
+    --color-primario: #dae9f3;
+    --color-secundario: #a3e99c;
+    --color-terciario: #e0e0e0;
+}
+
+.texto-primario {
+    color: var(--color-primario);
+}
+
+.texto-secundario {
+    color: var(--color-secundario);
+}
+
+.texto-terciario {
+    color: var(--color-terciario);
+    font-weight: 500;
+}

@@ -1,0 +1,27 @@
+---
+import { Image } from "astro:assets"
+import batman from "../assets/images/batman.webp"
+
+var contentText = {
+    title: "Desarrollador de software, apasionado por la tecnología y la innovación.",
+    description: "Me apasiona la tecnología y la innovación, y me encanta aprender cosas nuevas cada día.",
+    cta: "Learn more",
+    ctaLink: "/about",
+    image: "./assets/images/goku.png",
+    alt: "Landing One Image"
+}
+---
+
+<section class="container mx-auto p-8" style="max-height: 70vh; overflow: auto;">
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+         
+        <div class="md:col-span-3 flex justify-center flex-col">
+            <h1 class="text-6xl mb-4 font-extrabold texto-primario">{contentText.title}</h1>
+            <p class="text-3xl font-semibold texto-secundario">{contentText.description}</p>
+        </div>
+         
+        <div class="md:col-span-2 text-center">
+            <Image src={batman} alt={contentText.alt} format="webp" class="mb-4 rounded-lg shadow-lg" />
+        </div>
+    </div>
+</section>
