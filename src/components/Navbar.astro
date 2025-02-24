@@ -1,11 +1,17 @@
 ---
 import "../styles/global.css";
 
-var links = [
+interface Link {
+    href: string;
+    text: string;
+}
+
+var links: Link[] = [
     { href: "/#about", text: "Sobre Mí" },
     { href: "/projects", text: "Proyectos" },
     { href: "/#contact", text: "Contacto" },
 ];
+
 ---
 <nav class="bg-gray-800 p-4">
     <div class="container mx-auto flex justify-between items-center">

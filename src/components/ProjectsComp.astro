@@ -1,7 +1,14 @@
 ---
 
+interface Proyect {
+    title: string;
+    description: string;
+    image: string;
+    url: string;
+    icon: string;
+}
 
-var proyects = [
+const proyects: Proyect[] = [
   {
     title: "ERP Web",
     description: "Desarrollo y mantenimiento de un sistema ERP utilizando Angular en el frontend y microservicios Web API con .NET Core en el backend. Me encargué de la optimización de consultas, diseño de arquitectura basada en microservicios y mejora del rendimiento general del sistema",

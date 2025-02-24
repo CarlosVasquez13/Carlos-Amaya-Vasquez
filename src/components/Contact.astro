@@ -1,6 +1,11 @@
 ---
+interface Contact {
+    type: string;
+    value: string;
+    icon: string;
+}
 
-var contacts = [
+var contacts: Contact[] = [
     {
         type: 'phone',
         value: 'https://wa.me/87343881',
