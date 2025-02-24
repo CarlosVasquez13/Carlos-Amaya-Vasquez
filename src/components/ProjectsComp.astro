@@ -72,13 +72,13 @@ const proyects: Proyect[] = [
 
 <section class="container mx-auto p-6">
     <h1 class="text-3xl font-bold mb-2 border-b-2 pb-1 texto-primario">Proyectos</h1>
-    <p class="text-lg texto-terciario pb-4">A lo largo de me experiencia he estado involucrado en diferentes proyectos de desarrollo</p>
+    <p class="texto-terciario pb-4 text-xl">A lo largo de me experiencia he estado involucrado en diferentes proyectos de desarrollo</p>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         {proyects.map((proyect) => (
             <div class="shadow-md rounded-lg p-4 flex items-center bg-card-primario">
                 <div>
                     <h2 class="font-bold text-4xl texto-secundario">{proyect.title}</h2>
-                    <p class="text-white font-semibold text-justify">{proyect.description}</p>
+                    <p class="text-white font-semibold text-justify text-xl">{proyect.description}</p>
                 </div>
             </div>
         ))}

@@ -12,7 +12,7 @@ interface ContentText {
 const contentText: ContentText = {
     title: "Desarrollador de software, apasionado por la tecnología y la innovación.",
     description: "Me apasiona la tecnología y la innovación, y me encanta aprender cosas nuevas cada día.",
-    cta: "Learn more",
+    cta: "",
     ctaLink: "/about",
     image: "/images/carlos_ext.png",
     alt: "Foto personal de Carlos Vásquez"
@@ -21,12 +21,10 @@ const contentText: ContentText = {
 
 <section class="container mx-auto p-8 flex justify-center items-center" style="max-height: 70vh; overflow: auto;">
     <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
-         
         <div class="md:col-span-3 flex justify-center flex-col text-center md:text-left">
-            <h1 class="text-6xl mb-4 font-extrabold texto-primario">{contentText.title}</h1>
-            <p class="text-3xl font-semibold texto-secundario">{contentText.description}</p>
+            <h1 class="text-4xl md:text-6xl mb-4 font-extrabold texto-primario">{contentText.title}</h1>
+            <p class="text-xl md:text-3xl font-semibold texto-secundario">{contentText.description}</p>
         </div>
-         
         <div class="md:col-span-2 text-center">
             <img src={contentText.image} alt={contentText.alt} class="rounded-full border-4 border-indigo-500 shadow-lg mx-auto">
         </div>
