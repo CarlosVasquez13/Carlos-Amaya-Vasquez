@@ -6,16 +6,50 @@ interface Proyect {
     image: string;
     url: string;
     icon: string;
+    iconsUrl?: ProyectIconsUrl[];
+
+}
+
+interface ProyectIconsUrl {
+    url: string;
+    icon: string;
+    description?: string;
 }
 
 const proyects: Proyect[] = [
-  {
-    title: "ERP Web",
-    description: "Desarrollo y mantenimiento de un sistema ERP utilizando Angular en el frontend y microservicios Web API con .NET Core en el backend. Me encargué de la optimización de consultas, diseño de arquitectura basada en microservicios y mejora del rendimiento general del sistema",
-    image: "/images/proyect1.jpg",
-    url: "https://www.google.com",
-    icon: ""
-  },
+    {
+        title: "Mejoras en Proyecto Base con Terraform y Azure",
+        description: "Colaboré en la implementación de mejoras específicas en un proyecto base que utiliza Terraform para la infraestructura como código y Azure como proveedor de nube. Las mejoras incluyeron la integración de colas para procesamiento asíncrono, uso de Blob Service para almacenamiento de archivos, desarrollo de funcionalidades con Next.js y Python, y la implementación de Azure Function Apps para tareas serverless.",
+        image: "/images/proyect9.jpg",
+        url: "https://www.google.com",
+        icon: "",
+        iconsUrl: [
+            {
+                url: "https://pokequeuealfa-ui-dev.azurewebsites.net/",
+                description: "Ver proyecto",
+                icon: "/icons/globe.png"
+            },
+            {
+                url: "https://github.com/CarlosVasquez13/expert.poke.queue.source/blob/main/README.md",
+                description: "Ver código fuente",
+                icon: "/icons/github.png"
+            },
+        ]
+    },
+    {
+        title: "Arquitectura E-commerce y Admin con Terraform y Azure",
+        description: "Diseño e implementación de una arquitectura escalable para un sistema de comercio electrónico y panel de administración utilizando Terraform para la infraestructura como código y Azure como proveedor de nube. Incluye bases de datos, almacenamiento en la nube, servicios para proceso en segundo plano, servicio de búsquedas y servicios de caché.",
+        image: "/images/proyect8.jpg",
+        url: "https://www.google.com",
+        icon: ""
+    },
+    {
+        title: "ERP Web",
+        description: "Desarrollo y mantenimiento de un sistema ERP utilizando Angular en el frontend y microservicios Web API con .NET Core en el backend. Me encargué de la optimización de consultas, diseño de arquitectura basada en microservicios y mejora del rendimiento general del sistema",
+        image: "/images/proyect1.jpg",
+        url: "https://www.google.com",
+        icon: ""
+    },
     {
         title: "ERP Legacy",
         description: "Mantenimiento y desarrollo de nuevos módulos para un sistema ERP basado en Visual Basic y WinForms. Trabajé en la refactorización de código, integración con nuevos servicios y modernización de procesos sin afectar la estabilidad del sistema.",
@@ -64,13 +98,6 @@ const proyects: Proyect[] = [
         image: "/images/proyect7.jpg",
         url: "https://www.google.com",
         icon: ""
-    },
-    {
-        title: "Arquitectura E-commerce y Admin con Terraform y Azure",
-        description: "Diseño e implementación de una arquitectura escalable para un sistema de comercio electrónico y panel de administración utilizando Terraform para la infraestructura como código y Azure como proveedor de nube. Incluye bases de datos, almacenamiento en la nube, servicios para proceso en segundo plano, servicio de búsquedas y servicios de caché.",
-        image: "/images/proyect8.jpg",
-        url: "https://www.google.com",
-        icon: ""
     }
  
 ]
@@ -86,7 +113,18 @@ const proyects: Proyect[] = [
                 <div>
                     <h2 class="font-bold text-4xl texto-secundario">{proyect.title}</h2>
                     <p class="text-white font-semibold text-justify text-xl">{proyect.description}</p>
+                    <div class="flex justify-start mt-4">
+                    {proyect.iconsUrl?.map((icon) => (
+                        <a href={icon.url} target="_blank" rel="noopener noreferrer"
+                        title={icon.description}
+                        class="hover:opacity-75">
+                            <img src={icon.icon} alt={icon.description} class="w-10 mt-2 h-10" />
+                        </a>
+                    ))}
                 </div>
+                </div>
+
+                
             </div>
         ))}
     </div>
